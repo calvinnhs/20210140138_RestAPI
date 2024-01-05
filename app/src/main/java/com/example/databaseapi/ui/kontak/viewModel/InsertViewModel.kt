@@ -1,10 +1,12 @@
-package com.example.databaseapi.ui.kontak.viewModel
+package com.example.consumeapi.ui.kontak.viewmodel
 
+import KontakRepository
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.databaseapi.model.Kontak
-import com.example.databaseapi.repository.KontakRepository
 import kotlinx.coroutines.launch
 
 class InsertViewModel (private val kontakRepository: KontakRepository) : ViewModel() {
@@ -55,4 +57,3 @@ fun Kontak.toInsertUiEvent(): InsertUiEvent = InsertUiEvent(
     email = email,
     nohp = telpon
 )
-
